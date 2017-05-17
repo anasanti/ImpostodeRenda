@@ -1,7 +1,5 @@
 package Business;
 
-import java.util.ArrayList;
-
 import Persistence.PessoasDAO;
 
 public class Cadastro {

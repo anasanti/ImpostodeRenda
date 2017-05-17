@@ -9,10 +9,15 @@ public class Pessoa {
 	private double contribuicao;
 	private double totalRendimentos;
 
-	public Pessoa(String nome, String cpf, int idade, int dependente, double contribuicao, double totalRendimentos) {
+	public Pessoa(String nome, String cpf, int idade, int dependente, double contribuicao, double totalRendimentos) throws Exception {
 	
+		if(cpf.length() == 11){
+			this.cpf = cpf;
+		}
+		else{
+			throw new Exception("CPF inváido");
+		}
 		this.nome = nome;
-		this.cpf = cpf;
 		this.idade = idade;
 		this.dependente =  dependente;
 		this.contribuicao = contribuicao;
@@ -32,9 +37,6 @@ public class Pessoa {
 		return this.cpf;
 	}
 	
-	public void setCPF(String cpf) {
-		this.cpf = cpf;
-	}
 	
 	public int getIdade() {
 		return this.idade;

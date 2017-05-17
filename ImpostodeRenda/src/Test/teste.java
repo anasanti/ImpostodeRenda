@@ -16,28 +16,28 @@ public class teste {
 	}
 
 	@Test
-	public void testSimplificado() {
+	public void testSimplificado() throws Exception{
 		Pessoa pessoa = new Pessoa("Vitor", "1234567890", 19, 0, 20000, 90000);
 		double resultado = Simplificada.calcular(pessoa);
 		assertEquals(23787.5, resultado, 0.1);
 	}
 
 	@Test
-	public void testSimplificado1() {
+	public void testSimplificado1() throws Exception{
 		Pessoa pessoa = new Pessoa("Pedro", "1234567890", 19, 0, 40000, 90000);
 		double resultado = Simplificada.calcular(pessoa);
 		assertEquals(23787.5, resultado, 0.1);
 	}
 
 	@Test
-	public void testCompleta() {
+	public void testCompleta() throws Exception {
 		Pessoa pessoa = new Pessoa("Ana", "1234567890", 66, 3, 50000, 150000);
 		double resultado = Completa.calcular(pessoa);
 		assertEquals(41250.0, resultado, 0.1);
 	}
 
 	@Test
-	public void testCompleta1() {
+	public void testCompleta1() throws Exception{
 		Pessoa pessoa = new Pessoa("Thaís", "1234567890", 66, 3, 20000, 150000);
 		double resultado = Completa.calcular(pessoa);
 		assertEquals(41250.0, resultado, 0.1);
