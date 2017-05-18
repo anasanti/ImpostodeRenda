@@ -71,7 +71,7 @@ public class tela {
 		JButton btnConfirmar = new JButton("Confirmar");
 		btnConfirmar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.OK_OPTION("");
+				JOptionPane.OK_OPTION();
 			}
 		});
 		btnConfirmar.setBounds(236, 228, 89, 23);
