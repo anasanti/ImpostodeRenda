@@ -61,6 +61,7 @@ public class tela {
 	private void initialize() {
 		textField.setColumns(10);
 		
+		Pessoa pe;
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -87,7 +88,7 @@ public class tela {
 		JButton btnSimplificada = new JButton("Simplificada");
 		btnSimplificada.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Simplificada.calcular(pe);
+				lblSimplificada.setText(Integer.toString(Simplificada.calcular(pe)));
 			}
 		});
 		btnSimplificada.setBounds(10, 228, 89, 23);
@@ -190,7 +191,7 @@ public class tela {
 		textSimpl = new JTextField();
 		textSimpl.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				lblSimplificada.setText(null);
+				
 			}
 		});
 		textSimpl.setBounds(236, 48, 188, 20);
@@ -200,7 +201,7 @@ public class tela {
 		textCompl = new JTextField();
 		textCompl.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				lblCompleta.setText(null);
+				
 			}
 		});
 		textCompl.setBounds(236, 135, 188, 20);
@@ -210,7 +211,7 @@ public class tela {
 		JButton btnCompleta = new JButton("Completa");
 		btnCompleta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Completa.calcular(pe);
+				lblCompleta.setText(Integer.toString(Completa.calcular(pe)));
 			}
 		});
 		btnCompleta.setBounds(109, 228, 89, 23);
