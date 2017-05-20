@@ -1,6 +1,6 @@
-package Business;
+package irpfnogocio;
 
-import Business.Pessoa;
+import irpfnogocio.Pessoa;
 
 public class Completa {
 	

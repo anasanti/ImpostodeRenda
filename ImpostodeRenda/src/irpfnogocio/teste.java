@@ -1,13 +1,9 @@
-package Test;
+package irpfnogocio;
 
 import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Test;
-
-import Business.Pessoa;
-import Business.Simplificada;
-import Business.Completa;
 
 public class teste {
 

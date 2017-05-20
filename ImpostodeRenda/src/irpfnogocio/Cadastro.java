@@ -1,15 +1,12 @@
-package Persistence;
-
+package irpfnogocio;
 
 import java.util.ArrayList;
 
-import Business.Pessoa;
+public class Cadastro {
 
-public class PessoasDAO {
-	
 	private ArrayList<Pessoa> listaPessoas;
 	
-	public PessoasDAO(){
+	public Cadastro(){
 		listaPessoas = new ArrayList<>();
 	}
 	
@@ -27,5 +24,4 @@ public class PessoasDAO {
 		}
 		throw new Exception("Pessoa não cadastrada");
 	}
-
 }

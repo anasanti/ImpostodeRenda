@@ -1,12 +1,11 @@
-package Uniterface;
+package irpfInterface;
 
 import java.util.Scanner;
 
-import Business.Cadastro;
-import Business.Completa;
-import Business.Pessoa;
-import Business.Simplificada;
-import Persistence.*;
+import irpfnogocio.Cadastro;
+import irpfnogocio.Completa;
+import irpfnogocio.Pessoa;
+import irpfnogocio.Simplificada;
 
 public class App {
 
