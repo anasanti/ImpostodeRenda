@@ -9,6 +9,10 @@ public class Pessoa {
 	private double contribuicao;
 	private double totalRendimentos;
 
+	public Pessoa(){
+		
+	}
+	
 	public Pessoa(String nome, String cpf, int idade, int dependente, double contribuicao, double totalRendimentos) throws Exception {
 	
 		if(cpf.length() == 11){
@@ -23,6 +27,14 @@ public class Pessoa {
 		this.contribuicao = contribuicao;
 		this.totalRendimentos = totalRendimentos;
 		
+	}
+	
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 	
 	public String getNome() {

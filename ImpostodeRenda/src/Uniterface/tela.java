@@ -61,7 +61,7 @@ public class tela {
 	private void initialize() {
 		textField.setColumns(10);
 		
-		Pessoa pe;
+		Pessoa pe = new Pessoa();
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -82,17 +82,6 @@ public class tela {
 
 			}
 		});
-		btnConfirmar.setBounds(236, 228, 89, 23);
-		frame.getContentPane().add(btnConfirmar);
-		
-		JButton btnSimplificada = new JButton("Simplificada");
-		btnSimplificada.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				lblSimplificada.setText(Integer.toString(Simplificada.calcular(pe)));
-			}
-		});
-		btnSimplificada.setBounds(10, 228, 89, 23);
-		frame.getContentPane().add(btnSimplificada);
 		
 		JLabel lblNome = new JLabel("Nome:");
 		lblNome.setBounds(10, 23, 46, 14);
@@ -183,12 +172,17 @@ public class tela {
 		lblSimplificada.setBounds(259, 21, 153, 14);
 		frame.getContentPane().add(lblSimplificada);
 		
+	
+		
+		
+	
 		JLabel lblCompleta = new JLabel("Completa");
 		lblCompleta.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
 		lblCompleta.setBounds(259, 108, 153, 14);
 		frame.getContentPane().add(lblCompleta);
 		
 		textSimpl = new JTextField();
+		textSimpl.setEditable(false);
 		textSimpl.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -199,6 +193,7 @@ public class tela {
 		textSimpl.setColumns(10);
 		
 		textCompl = new JTextField();
+		textCompl.setEditable(false);
 		textCompl.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -211,10 +206,40 @@ public class tela {
 		JButton btnCompleta = new JButton("Completa");
 		btnCompleta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				lblCompleta.setText(Integer.toString(Completa.calcular(pe)));
+				
+				pe.setNome(textNome.getText());
+				pe.setIdade(Integer.parseInt(textIdade.getText()));
+				pe.setCpf(textCPF.getText());
+				pe.setDependente(Integer.parseInt(textDep.getText()));
+				pe.setContribuicao(Double.parseDouble(textCont.getText()));
+				pe.setTotalRendimentos(Double.parseDouble(textRend.getText()));
+				
+				lblCompleta.setText(String.valueOf(Completa.calcular(pe)));
 			}
 		});
 		btnCompleta.setBounds(109, 228, 89, 23);
 		frame.getContentPane().add(btnCompleta);
+			
+		
+		
+		btnConfirmar.setBounds(236, 228, 89, 23);
+		frame.getContentPane().add(btnConfirmar);
+		
+		JButton btnSimplificada = new JButton("Simplificada");
+		btnSimplificada.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				pe.setNome(textNome.getText());
+				pe.setIdade(Integer.parseInt(textIdade.getText()));
+				pe.setCpf(textCPF.getText());
+				pe.setDependente(Integer.parseInt(textDep.getText()));
+				pe.setContribuicao(Double.parseDouble(textCont.getText()));
+				pe.setTotalRendimentos(Double.parseDouble(textRend.getText()));
+				
+				lblSimplificada.setText(String.valueOf(Simplificada.calcular(pe)));
+			}
+		});
+		btnSimplificada.setBounds(10, 228, 89, 23);
+		frame.getContentPane().add(btnSimplificada);
 	}
 }
